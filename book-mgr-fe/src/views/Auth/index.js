@@ -1,6 +1,7 @@
 import { formatCountdown } from 'ant-design-vue/lib/statistic/utils';
-import { defineComponent } from 'vue';
+import { defineComponent, reactive } from 'vue';
 import { UserOutlined, LockOutlined, LinkOutlined } from '@ant-design/icons-vue';
+import { auth } from '@/service';
 
 export default defineComponent({
     components:{
@@ -9,6 +10,18 @@ export default defineComponent({
         LinkOutlined,
     },
     setup(){
+        const regForm = reactive({
+            account:'',
+            password:'',
+        });
 
+        const register = () => {
+            auth.register(regForm.account, regForm.password);
+        };
+
+        return {
+            regForm,
+            register,
+        };
     },
 });
