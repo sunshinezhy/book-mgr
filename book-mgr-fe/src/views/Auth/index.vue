@@ -12,7 +12,7 @@
 
                 <!--账号框  -->
                 <div class="item">
-                 <a-input size="large" placeholder="账户">
+                 <a-input size="large" placeholder="账户"  v-model:value="loginForm.account">
                      <template v-slot:prefix>
                          <UserOutlined />
                      </template>
@@ -21,7 +21,7 @@
 
                 <!-- 密码框 -->
                 <div class="item">
-                 <a-input size="large" placeholder="密码" >
+                 <a-input size="large" placeholder="密码" v-model:value="loginForm.password">
                      <template v-slot:prefix>
                          <LockOutlined />
                      </template>
@@ -35,7 +35,7 @@
 
                 <!-- 登录按钮 -->
                 <div class="item">
-                    <a-button size="large" type="primary">
+                    <a-button size="large" type="primary" @click="login">
                         登录
                     </a-button>
                 </div>
@@ -45,7 +45,7 @@
 
                 <!--账号框  -->
                 <div class="item">
-                 <a-input size="large" placeholder="账户" v-model:value="regForm.account">
+                 <a-input size="large" placeholder="账户" v-model:value='regForm.account'>
                      <template v-slot:prefix>
                          <UserOutlined />
                      </template>
@@ -54,7 +54,7 @@
 
                 <!-- 密码框 -->
                 <div class="item">
-                 <a-input size="large" placeholder="密码" v-model:value="regForm.password">>
+                 <a-input size="large" placeholder="密码" v-model:value='regForm.password'>
                      <template v-slot:prefix>
                          <LockOutlined />
                      </template>
@@ -63,7 +63,7 @@
 
                 <!-- 邀请码 -->
                 <div class="item">
-                 <a-input size="large" placeholder="邀请码" >
+                 <a-input size="large" placeholder="邀请码" v-model:value="regForm.inviteCode">
                      <template v-slot:prefix>
                          <LinkOutlined />
                      </template>
