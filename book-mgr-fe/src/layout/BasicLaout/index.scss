@@ -1,0 +1,73 @@
+.basic-layout {
+    .app-header-placeholder {
+        height: 64px;
+        width: 100%;
+    }
+
+    .app-header {
+    height: 64px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 8px #f0f1f2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    width: 100%;
+    z-index: 1;
+
+    .left {
+        display: flex;
+        align-items: center;
+    
+        img {
+            height: 50px;
+            margin-right: 16px;
+        }
+    
+        .title {
+            color: rgba(0, 0, 0, .87);
+            font-size: 18px;
+        }
+    
+    }
+    
+    .right {
+        display: flex;
+        align-items: center;
+    
+        .logout {
+            width: 80px;
+            text-align: center;
+            height: 64px;
+            line-height: 64px;
+            cursor: pointer;
+            margin-left: 16px;
+
+            &:hover {
+                background-color: #eee;
+            }
+        }
+    }
+  }
+
+  .app-content {
+      display: flex;
+
+      .left {
+          width: 256px;
+          background-color: #efefef;
+          position: fixed;
+          top: 64px;
+          bottom: 0;
+      }
+
+      .right {
+        flex: 1;
+        padding: 24px;
+        margin-left: 256px;
+      }
+  }
+}
